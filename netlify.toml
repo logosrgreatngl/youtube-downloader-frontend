@@ -1,6 +1,21 @@
+cd ~/youtube/youtube-frontend
+
+# Update netlify.toml
+cat > netlify.toml << 'EOF'
 [build]
-  command = "node create-env.js"
+  # No build command needed for static site
+  command = "echo 'No build needed'"
   publish = "."
 
-[[plugins]]
-  package = "@netlify/plugin-inline-build-vars"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+EOF
+
+# Commit and push
+git add netlify.toml
+git commit -m "Fix Netlify deployment - no build needed for static site"
+git push
