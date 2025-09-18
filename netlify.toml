@@ -1,0 +1,6 @@
+[build]
+  command = "node create-env.js"
+  publish = "."
+
+[[plugins]]
+  package = "@netlify/plugin-inline-build-vars"
