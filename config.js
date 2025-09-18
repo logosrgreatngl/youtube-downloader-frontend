@@ -5,8 +5,7 @@
     
     // TODO: UPDATE THESE WITH YOUR ACTUAL URLS AFTER DEPLOYING
     const productionDomains = {
-        'your-app-name.netlify.app': 'https://your-replit-name.repl.co',
-        // Example: 'awesome-youtube-dl.netlify.app': 'https://youtube-backend-johndoe.repl.co',
+        'your-app-name.netlify.app': 'https://f8a493d1-18ec-46a1-876f-b1d595f1e277-00-238hliewx80t4.pike.replit.dev/',
     };
     
     // Check if we're on a production domain
@@ -14,7 +13,7 @@
         apiUrl = productionDomains[hostname];
     } else if (hostname.includes('netlify.app') || hostname.includes('netlify.live')) {
         // Fallback for any Netlify deploy
-        apiUrl = 'https://your-replit-name.repl.co'; // TODO: UPDATE THIS
+        apiUrl = 'https://f8a493d1-18ec-46a1-876f-b1d595f1e277-00-238hliewx80t4.pike.replit.dev//'; // TODO: UPDATE THIS
     }
     
     window.CONFIG = {
